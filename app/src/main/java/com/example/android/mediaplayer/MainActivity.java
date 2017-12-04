@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
                     playButton.setText("Play");
                 }
                 else {
+                    Intent intent=new Intent(MainActivity.this,PlayerService.class);
+                    startService(intent);
                     playerService.play();
                     playButton.setText("Pause");
                 }
